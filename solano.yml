@@ -1,5 +1,6 @@
 ---
-test: python -u runtests.py -g --shell -- -c 'make -C doc html-scipyorg'
+tests: 
+  - python -u runtests.py -g --shell -- -c 'make -C doc html-scipyorg'
 hooks:
   pre_setup: |
     sudo apt-get install libatlas-dev libatlas-base-dev liblapack-dev gfortran libgmp-dev libmpfr-dev libfreetype6-dev libpng-dev zlib1g-dev texlive-fonts-recommended
